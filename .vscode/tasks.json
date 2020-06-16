@@ -1,0 +1,76 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build with Clang/g++",
+            "type": "shell",
+            "osx": {
+                "command": "clang++",
+                "args": [
+                    "-std=c++17",
+                    "*.cpp",
+                    "--debug",
+                    "-I",
+                    "/usr/local/include/SDL2",
+                    "-L",
+                    "/usr/local/Cellar/sdl2/2.0.10/lib",
+                    "-l",
+                    "SDL2-2.0.0",
+                    "-L",
+                    "/usr/local/Cellar/sdl2_image/2.0.5/lib",
+                    "-l",
+                    "SDL2_image-2.0.0",
+                ]
+            },
+            "windows": {
+                "command": "g++",
+                "args": [
+                    "*.cpp",
+                    "-IC://mingw_dev_lib//include//SDL2",
+                    "-LC://mingw_dev_lib//lib",
+                    "-w",
+                    "-lmingw32",
+                    "-lSDL2main",
+                    "-lSDL2",
+                    "-lSDL2_image"
+                ]
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": false
+                
+            }
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "osx": {
+                "command": "./a.out"
+            },
+            "windows": {
+                "command": "a.exe"
+            }
+        },
+        {
+            "label": "build and run",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Build with Clang/g++",
+                "run"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/local/include"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks",
+                "/System/Library/Frameworks",
+                "/Library/Frameworks",
+                "/usr/local/Cellar/sdl2_image/2.0.5/lib/**",
+                "/usr/local/Cellar/sdl2/2.0.10/lib/**"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C://mingw_dev_lib//include//SDL2",
+                "C://mingw_dev_lib//lib"
+            ],
+            "compilerPath": "C://mingw-w64//x86_64-8.1.0-win32-seh-rt_v6-rev0 //mingw64//bin//g++.exe",
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c11",
+            "intelliSenseMode": "gcc-x64",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "C://mingw_dev_lib//include//SDL2"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 4
+}
